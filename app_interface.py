@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/home')
 def home():
-    return render_template('homepage.html')
+    return render_template('index.html')
 
 @app.route('/predict_charges', methods=['GET', 'POST'])
 def predict_charges():
@@ -26,7 +26,7 @@ def predict_charges():
 
         obj = MedicalInsurance(age,gender,bmi,children,smoker,region)
         pred_charges = obj.get_predicted_charges()
-        return render_template('homepage.html', prediction = pred_charges)
+        return render_template('index.html', prediction = pred_charges)
     except:
         print(traceback.print_exc())
         return redirect(url_for('home'))
