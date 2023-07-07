@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Insurance</title>
+</head>
+<body>
+    <h1>Welcome To Medical Insurance</h1>
+    <h3>Check The Best Charges For Your Insurance</h3>
+
+    <form method="POST" action="/predict_charges">
+        <label>
+            Age:<br>
+            <input type="text" name="age" placeholder="Enter Age"><br><br>
+            Gender:<br>
+            <input type="radio" value="male"name="gender">Male
+            <input type="radio" value="female"name="gender">Female<br><br>
+            BMI:<br>
+            <input type="text" name="bmi" placeholder="Enter BMI Value"><br><br>
+            Childrens:<br>
+            <input type="text" name="children" placeholder="Enter no of Childrens"><br><br>
+            Are You Smoker? :<br>
+            <input type="radio" value="yes" name="smoker">Yes
+            <input type="radio" value="no" name="smoker"> No<br><br>
+            Select Region:<br>
+            <select name = "region">
+                <option value = "northeast">Select>></option>
+                <option value = "northeast">Northeast</option>
+                <option value = "southeast">Southeast</option>
+                <option value = "northwest">Northwest</option>
+                <option value = "southwest">Southwest</option>
+            </select><br><br>
+            
+        </label>
+        <input type = "submit" value="SUBMIT">
+
+        <h4><strong>Your insurance premium charges will be <b> {{ prediction }} /- Rs.</b> Only </strong></h4>
+
+    </form>
+
+
+</body>
+</html>
