@@ -38,5 +38,3 @@ class MedicalInsurance():
         return predicted_charges
     
 
-obj = MedicalInsurance(23,'male',28,2,'no','northwest')
-obj.get_predicted_charges()
